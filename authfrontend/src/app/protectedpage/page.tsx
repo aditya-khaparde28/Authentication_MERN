@@ -32,7 +32,7 @@ export default function ProtectedPage() {
     return (
         <div>
             <h1>Welcome to the Protected Page!</h1>
-            {/* Your protected page content goes here */}
+            {/* */}
 
             <Navbar/>
         </div>
