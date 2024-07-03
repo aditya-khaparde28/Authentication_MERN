@@ -6,11 +6,11 @@ import styles from './page.module.css';
 import '../auth.css';
 import Link from 'next/link';
 //import { toast } from 'react-toastify';
-import { ToastContainer, toast } from 'react-toastify'; // Ensure ToastContainer and toast are imported
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import logo from '@/assets/logo1.png';
 // import { getCookie , setCookie} from 'cookies-next';
-// Define an interface for the form data
+
 interface FormData {
     email: string;
     password: string;
@@ -112,21 +112,21 @@ export default function Signin() {
 
 
                 if (response.ok) {
-                    // toast(response.message, {
-                    //     type: 'success',
-                    //     position: 'top-right',
-                    //     autoClose: 2000
-                    // })
+                    toast(response.message, {
+                        type: 'success',
+                        position: 'top-right',
+                        autoClose: 2000
+                    })
 
-                   // window.location.href = "/"
+                   window.location.href = "/"
 
 
                 } else {
-                    // toast(response.message, {
-                    //     type: 'error',
-                    //     position: 'top-right',
-                    //     autoClose: 2000
-                    // });
+                    toast(response.message, {
+                        type: 'error',
+                        position: 'top-right',
+                        autoClose: 2000
+                    });
                 }
             })
             .catch((error) => {
